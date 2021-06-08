@@ -1,0 +1,21 @@
+[package]
+name = "echo-benchmarks"
+version = "0.1.0"
+authors = ["Carl Lerche <me@carllerche.com>"]
+edition = "2018"
+
+[[bin]]
+name = "blocking-echo-server"
+path = "src/blocking-echo-server.rs"
+
+[[bin]]
+name = "blocking-echo-client"
+path = "src/blocking-echo-client.rs"
+
+[[bin]]
+name = "async-echo-server"
+path = "src/async-echo-server.rs"
+
+[dependencies]
+tokio = { version = "1.6", features = ["full", "parking_lot"] }
+getopts = "0.2"
