@@ -16,6 +16,11 @@ path = "src/blocking-echo-client.rs"
 name = "async-echo-server"
 path = "src/async-echo-server.rs"
 
+[[bin]]
+name = "async-echo-client"
+path = "src/async-echo-client.rs"
+
 [dependencies]
 tokio = { version = "1.6", features = ["full", "parking_lot"] }
 getopts = "0.2"
+threadpool = "1.8"
